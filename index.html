@@ -28,12 +28,31 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .subtitle { font-size: 14px; color: #8a7a9a; line-height: 1.5; }
 .section-label { font-size: 11px; color: #b09aba; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; margin-bottom: 10px; }
 .services { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-.card { background: #fff; border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 1px 6px rgba(120,80,140,0.08); border: 1px solid #ede5f0; }
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 1px 6px rgba(120,80,140,0.08);
+  border: 1px solid #ede5f0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover, .card:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 12px rgba(120,80,140,0.18);
+}
 .card-info { flex: 1; }
 .card-name { font-size: 15px; font-weight: 500; color: #2d2040; margin-bottom: 3px; }
 .card-desc { font-size: 13px; color: #9e8dae; line-height: 1.4; }
 .card-price { font-size: 16px; font-weight: 600; color: #7a5a90; white-space: nowrap; }
-.btn { display: block; width: 100%; padding: 15px; text-align: center; border-radius: 14px; font-size: 16px; font-weight: 500; text-decoration: none; margin-bottom: 10px; }
+.card-arrow { font-size: 18px; color: #c8a8d8; margin-left: 4px; }
+.btn { display: block; width: 100%; padding: 15px; text-align: center; border-radius: 14px; font-size: 16px; font-weight: 500; text-decoration: none; margin-bottom: 10px; transition: opacity 0.15s; }
+.btn:hover { opacity: 0.88; }
 .btn-tg { background: #8b6aa8; color: #fff; }
 .btn-clinic { background: #c8a8d8; color: #fff; }
 .btn-ig { background: #fff; color: #7a5a90; border: 1.5px solid #d5c0e0; }
@@ -51,42 +70,46 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 
   <p class="section-label">Онлайн-услуги</p>
   <div class="services">
-    <div class="card">
+    <a class="card" href="https://t.me/dr_novikova_aa" target="_blank">
       <div class="card-info">
         <div class="card-name">Онлайн-консультация</div>
         <div class="card-desc">Видеозвонок, разбор ситуации, рекомендации</div>
       </div>
       <div class="card-price">3 000 ₽</div>
-    </div>
-    <div class="card">
+      <div class="card-arrow">›</div>
+    </a>
+    <a class="card" href="https://t.me/dr_novikova_aa" target="_blank">
       <div class="card-info">
         <div class="card-name">Расшифровка анализов крови</div>
         <div class="card-desc">Подробный разбор результатов с пояснениями</div>
       </div>
       <div class="card-price">2 000 ₽</div>
-    </div>
-    <div class="card">
+      <div class="card-arrow">›</div>
+    </a>
+    <a class="card" href="https://t.me/dr_novikova_aa" target="_blank">
       <div class="card-info">
         <div class="card-name">Консультация в чате</div>
         <div class="card-desc">Помогу понять, куда двигаться дальше</div>
       </div>
       <div class="card-price">1 000 ₽</div>
-    </div>
+      <div class="card-arrow">›</div>
+    </a>
   </div>
 
   <p class="section-label">Очный приём</p>
   <div class="services" style="margin-bottom: 24px;">
-    <div class="card">
+    <a class="card" href="https://saratov.fomin-clinic.ru/booking/?doctor=48551" target="_blank">
       <div class="card-info">
         <div class="card-name">Запись в клинику Фомина</div>
         <div class="card-desc">Очный приём в Саратове</div>
       </div>
-    </div>
+      <div class="card-arrow">›</div>
+    </a>
   </div>
 
-  <a class="btn btn-tg" href="https://t.me/dr_novikova_aa">Написать в Telegram</a>
-  <a class="btn btn-clinic" href="https://saratov.fomin-clinic.ru/booking/?doctor=48551">Записаться очно — клиника Фомина</a>
-  <a class="btn btn-ig" href="https://www.instagram.com/dr._novikova.aa">Instagram @dr._novikova.aa</a>
+  <a class="btn btn-tg" href="https://t.me/dr_novikova_aa" target="_blank">Написать в Telegram</a>
+  <a class="btn btn-clinic" href="https://saratov.fomin-clinic.ru/booking/?doctor=48551" target="_blank">Записаться очно — клиника Фомина</a>
+  <a class="btn btn-ig" href="https://www.instagram.com/dr._novikova.aa" target="_blank">Instagram @dr._novikova.aa</a>
 </div>
 </body>
 </html>
